@@ -15,31 +15,27 @@
  *All your code should be in the main function
  *
  * Return: Always 0 (Success)
-*/
-
+ */
 int main(void)
 {
-	int num1 = 0, num2;
+	int d, p;
 
-	while (num1 <= 9)
+	for (d = '0'; d < '9'; d++)
 	{
-		num2 = 0;
-		while (num2 <= 9)
+		for (p = d + 1; p <= '9'; p++)
 		{
-			if (num1 != num2 && num1 < num2)
+			if (p != d)
 			{
-				putchar(num1 + 48);
-				putchar(num2 + 48);
+				putchar(d);
+				putchar(p);
 
-				if (num1 + num2 != 17)
-				{
-					putchar(',');
-					putchar(' ');
-				}
+				if (d == '8' && p == '9')
+					continue;
+
+				putchar(',');
+				putchar(' ');
 			}
-			++num2;
 		}
-		++num1;
 	}
 	putchar('\n');
 
