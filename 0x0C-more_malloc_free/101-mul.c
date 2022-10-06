@@ -96,8 +96,9 @@ void multiply(char *s1, char *s2)
 		total_l--;
 	}
 
-	for (i = 0; i < total_l; i++)
+	for (i = 0; i < total_l; i++){
 		printf("%i", ptr[i]);
+	}
 	printf("\n");
 	free(temp);
 }
